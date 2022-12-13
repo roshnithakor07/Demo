@@ -1,0 +1,50 @@
+/* Styles go here */
+
+.page-header,
+.page-header-space {
+  height: 20px;
+  font-size:20px;
+  white-space:nowrap;
+  margin-left:38px;
+
+}
+
+.page-footer,
+.page-footer-space {
+  height: 50px;
+}
+
+.page-footer {
+  position: fixed;
+  bottom: 0;
+  left: 20px;
+  width: 100%;
+  border-top: 1px solid black; /* for demo */
+  display: none;
+}
+
+.page-header {
+  position: fixed;
+  top: 0mm;
+  right: 50px;
+  width: 100%;
+  display: none;
+}
+
+.page {
+  page-break-after: always;
+}
+
+@media print{
+  .page-footer , .page-header{
+    display: block;
+  }
+
+  @page: right {
+    @top-right {
+      content: "My title";
+    }
+  } ;
+}
+
+
